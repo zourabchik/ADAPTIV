@@ -5,26 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адаптив</title>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () {
-                (m[i].a = m[i].a || []).push(arguments)
-            };
-            m[i].l = 1 * new Date();
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
-                .insertBefore(k, a)
-        })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
-        ym(66241378, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true,
-            trackHash: true
-        });
-    </script> <noscript>
-        <div><img src="https://mc.yandex.ru/watch/66241378" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript> <!-- /Yandex.Metrika counter -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -120,10 +100,10 @@
                     <span class="section-sabtitle offer__sabtitle">Оставьте заявку на разработку бесплатного
                         дизайн-проекта!</span>
                     <!-- /.section-sabtitle -->
-                    <form action="#" class="form offer__form">
-                        <input type="text" class="input offer__input" placeholder="Ваше имя">
-                        <input type=" tell" class="input offer__input" placeholder="Ваш телефон">
-                        <button class=" button offer__button">Получить бесплатный дизайн-проект
+                    <form action="mail.php" mathod="POST" class="form offer__form">
+                        <input type="text" class="input offer__input" name="user_name" placeholder="Ваше имя">
+                        <input type=" tell" class="input offer__input" name="user_phone" placeholder="Ваш телефон">
+                        <button type="submit" class=" button offer__button">Получить бесплатный дизайн-проект
                         </button>
                     </form>
                     <!-- /.form offer__form -->
@@ -333,8 +313,80 @@
             </h3>
         </section>
         <section class="helps section">
-
+            <div class="container">
+                <d class="helps__blocks">
+                    <div class="photos">
+                        <div class="photos__text">
+                            <h4 class="photos__title">Поможем закупить все материалы по оптовым ценам у проверенных
+                                поставщиков
+                            </h4>
+                        </div>
+                        <div class="photos__img">
+                            <img src="img/человек_1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="photos">
+                        <div class="photos__text">
+                            <h4 class="photos__title">Мы дадим Вам максимальные скидки
+                                у наших партнеров для закупки материалов оптом
+                            </h4>
+                        </div>
+                        <div class="photos__img">
+                            <img src="img/человек_2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="photos">
+                        <div class="photos__text">
+                            <h4 class="photos__title">Все, что не сможете найти в городе -
+                                поможем заказать у проверенных
+                                поставщиков
+                            </h4>
+                        </div>
+                        <div class="photos__img">
+                            <img src="img/человек_3.png" alt="">
+                        </div>
+                    </div>
+            </div>
+            </div>
+            </div>
         </section>
+        <div class="section garants">
+            <div class="container">
+                <h2 class="section-tittle garants__title">Все наши гарантийные обязательства<br>
+                    подробно и прозрачно описаны в договоре
+                </h2>
+                <div class="pictures">
+                    <div class="picture">
+                        <div class="picture__img"><img src="img/гарантия_1.png" alt="" width="270px" height="360px">
+                        </div>
+                        <div class="picture__text">
+                            <div class="picture__title picture__one">Гарантия на качество<br>
+                                выполняемых работ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="picture">
+                        <div class="picture__img"><img src="img/гарантия_2.png" alt="" width="270px" height="360px">
+                        </div>
+                        <div class="picture__text">
+                            <div class="picture__title picture__two">Гарантия на фиксированные цены<br>
+                                Виды работ и цены на них прописаны в договоре
+                            </div>
+                        </div>
+                    </div>
+                    <div class="picture">
+                        <div class="picture__img"><img src="img/гарантия_3.png" alt="" width="270px" height="360px">
+                        </div>
+                        <div class="picture__text">
+                            <div class="picture__title picture__three">Гарантия на точное соблюдение сроков и<br>
+                                ответственность за их
+                                невыполнение
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- /.section steps -->
         <section class="section brif">
             <div class="container">
@@ -404,7 +456,8 @@
                             </span>
                             <!-- /.contacts-list__icon -->
                             <span class="contacts-list__text">г. Москва <br>
-                                <span class="contacts-list__description">ул. Ленинга, д. 10, корпус 2, оф. 308</span>
+                                <span class="contacts-list__description">ул. Ленинга, д. 10, корпус 2, оф.
+                                    308</span>
                             </span>
                             <!-- /.contacts-list__text -->
                         </li>
@@ -440,19 +493,12 @@
             <!-- /.contacts-blocks -->
         </div>
     </footer>
-    <div class="strelka">
-        <a id="button-strelka"></a>
-    </div>
     <div class="modal" id="modal">
         <div class="modal-dialog">
             <button class="modal-dialog__close" id="close">&times;</button>
             <div class="modal-column">
-                <div class="modal-content">Контент</div>
-            </div>
-            <div class="modal-column">
-                <h3 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону
+                <h3 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону
                 </h3>
-                span.form__sabtitle
             </div>
         </div>
         <!-- /.modal-dialog -->

@@ -1,0 +1,28 @@
+.helps
+    &__blocks
+        display: flex
+        justify-content: center
+        text-align: center
+.photos
+    &__title
+        font-size: 16px
+        width: 320px
+        height: 79px
+        text-align: start
+        +reg
+    &__img
+        padding-right: 30px
+@media (max-width: 1200px)
+    .helps
+        &__blocks
+            flex-direction: column
+@media (max-width: 768px)
+    .helps
+        &__blocks
+            flex-direction: column
+        .photos
+            &__img
+                width: 370px
+                margin: auto
+            &__title
+                margin: auto
